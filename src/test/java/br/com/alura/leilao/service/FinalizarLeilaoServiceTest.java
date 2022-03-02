@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -42,9 +43,8 @@ class FinalizarLeilaoServiceTest {
 		service.finalizarLeiloesExpirados();
 		
 		Leilao leilao = leiloes.get(0);
-		Assert.assertTrue(leilao.isFechado());
-		Assert.assertEquals(new BigDecimal("900"), 
-				leilao.getLanceVencedor().getValor());
+		Assertions.assertTrue(leilao.isFechado());
+		Assertions.assertEquals(new BigDecimal("900"), leilao.getLanceVencedor().getValor());
 		
 		Mockito.verify(leilaoDao).salvar(leilao);
 	}
