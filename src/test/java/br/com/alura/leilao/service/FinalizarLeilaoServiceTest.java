@@ -1,10 +1,12 @@
 package br.com.alura.leilao.service;
 
+import br.com.alura.leilao.dao.LeilaoDao;
+import br.com.alura.leilao.model.Lance;
+import br.com.alura.leilao.model.Leilao;
+import br.com.alura.leilao.model.Usuario;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -12,18 +14,13 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import br.com.alura.leilao.dao.LeilaoDao;
-import br.com.alura.leilao.model.Lance;
-import br.com.alura.leilao.model.Leilao;
-import br.com.alura.leilao.model.Usuario;
-
 class FinalizarLeilaoServiceTest {
 	
 	private FinalizarLeilaoService service;
 	
 	@Mock
 	private LeilaoDao leilaoDao;
-	
+
 	@Mock
 	private EnviadorDeEmails enviadorDeEmails;
 	
@@ -78,7 +75,7 @@ class FinalizarLeilaoServiceTest {
 		try {
 			service.finalizarLeiloesExpirados();
 			Mockito.verifyNoInteractions(enviadorDeEmails);
-		} catch (Exception e) {}
+		} catch (Exception ignored) {}
 	}
 
 	private List<Leilao> leiloes() {
