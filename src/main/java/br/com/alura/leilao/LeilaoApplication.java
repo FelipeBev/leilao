@@ -8,8 +8,6 @@ public class LeilaoApplication {
 
 	public static void main(String[] args) {
 
-		if(true)
-			throw new RuntimeException("Teste de Falha");
-		SpringApplication.run(LeilaoApplication.class, args);
+		throw new RuntimeException("Teste de Falha");
 	}
 }
