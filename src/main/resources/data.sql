@@ -1,7 +1,7 @@
 INSERT INTO `users` (`user_id`, `email`, `enabled`, `username`, `role`, `password`) VALUES
 (1,	'fulano@gmail.com',	1,	'fulano',	'USER',	'$2a$12$hGLEmPlZqEktegi/yTzoJOYNpZOcXjiAhcJOWRs5CCBBrGszTQdrS'),
-(2,	'ciclano@gmail.com',	1,	'ciclano',	'USER',	'$2a$10$8MeF8YTUTv22DVthkhOs3.WGT4W1Wp1xRXcRxTM12MgDzRviDpw7i'),
-(3,	'beltrano@gmail.com',	1,	'beltrano',	'USER',	'$2a$10$8MeF8YTUTv22DVthkhOs3.WGT4W1Wp1xRXcRxTM12MgDzRviDpw7i');
+(2,	'ciclano@gmail.com',	1,	'ciclano',	'USER',	'$2a$12$hGLEmPlZqEktegi/yTzoJOYNpZOcXjiAhcJOWRs5CCBBrGszTQdrS'),
+(3,	'beltrano@gmail.com',	1,	'beltrano',	'USER',	'$2a$12$hGLEmPlZqEktegi/yTzoJOYNpZOcXjiAhcJOWRs5CCBBrGszTQdrS');
 
 INSERT INTO `leilao` (`id`, `data_abertura`, `nome`, `valor_inicial`, `usuario_user_id`, `fechado`) VALUES
 (1,	'2020-08-03',	'Tablet Xpto 3',	5.00,	1, false),
