@@ -8,6 +8,7 @@ public class LeilaoApplication {
 
 	public static void main(String[] args) {
 
+		throw
 		SpringApplication.run(LeilaoApplication.class, args);
 	}
 }
