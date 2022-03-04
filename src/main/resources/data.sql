@@ -1,5 +1,5 @@
 INSERT INTO `users` (`user_id`, `email`, `enabled`, `username`, `role`, `password`) VALUES
-(1,	'fulano@gmail.com',	1,	'fulano',	'USER',	'pas'),
+(1,	'fulano@gmail.com',	1,	'fulano',	'USER',	'$2a$10$8MeF8YTUTv22DVthkhOs3.WGT4W1Wp1xRXcRxTM12MgDzRviDpw7i'),
 (2,	'ciclano@gmail.com',	1,	'ciclano',	'USER',	'$2a$10$8MeF8YTUTv22DVthkhOs3.WGT4W1Wp1xRXcRxTM12MgDzRviDpw7i'),
 (3,	'beltrano@gmail.com',	1,	'beltrano',	'USER',	'$2a$10$8MeF8YTUTv22DVthkhOs3.WGT4W1Wp1xRXcRxTM12MgDzRviDpw7i');
 
