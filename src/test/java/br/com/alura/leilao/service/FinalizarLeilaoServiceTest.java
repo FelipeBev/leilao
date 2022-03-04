@@ -73,6 +73,8 @@ class FinalizarLeilaoServiceTest {
 		.thenThrow(RuntimeException.class);
 		
 		try {
+			if(true)
+				throw new RuntimeException("Teste de Falha");
 			service.finalizarLeiloesExpirados();
 			Mockito.verifyNoInteractions(enviadorDeEmails);
 		} catch (Exception ignored) {}
