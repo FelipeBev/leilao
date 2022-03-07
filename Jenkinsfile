@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'mvn clean test'
+                slackSend channel: 'jenkins', message: 'teste'
             }
         }
     }
