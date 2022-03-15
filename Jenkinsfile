@@ -7,8 +7,10 @@ pipeline {
             }
         }
         stage('slack'){
-            slackSend message: "*SUCCESS:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More info at: ${env.BUILD_URL}",
-                      channel: 'slack---teste'
+            steps {
+                slackSend message: "*SUCCESS:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More info at: ${env.BUILD_URL}",
+                          channel: 'slack---teste'
+            }
         }
         post {
             always {
