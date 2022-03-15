@@ -12,6 +12,7 @@ pipeline {
                           channel: 'slack---teste'
             }
         }
+    }
         post {
             always {
                 script {
@@ -25,5 +26,4 @@ pipeline {
                 }
             }
         }
-    }
 }
