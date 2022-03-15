@@ -1,10 +1,14 @@
 pipeline {
     agent any
-
+    stages {
         stage('build') {
             steps {
                 sh 'mvn clean test'
             }
+        }
+        stage('slack'){
+            slackSend message: "*SUCCESS:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER} \n More info at: ${env.BUILD_URL}",
+                      channel: 'slack---teste'
         }
         post {
             always {
@@ -19,5 +23,5 @@ pipeline {
                 }
             }
         }
-
+    }
 }
