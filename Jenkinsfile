@@ -1,6 +1,20 @@
 pipeline {
     agent any
     stages {
+        stage('Code checkout') {
+            steps {
+                dir("${env.HG_NODE_DIRECTORY}") {
+                    checkout poll: false,
+                        scm: [$class: 'GitSCM',
+                               branches: [[name: 'master']],
+                               doGenerateSubmoduleConfigurations: false,
+                               extensions: [[$class: 'GitLFSPull'],
+                                           [$class: 'LocalBranch', localBranch: 'master']],
+                               ubmoduleCfg: [],
+                               userRemoteConfigs: [url: 'https://github.com/FelipeBev/leilao']]
+                            }
+                        }
+                    }
         stage('build') {
             steps {
                 sh 'mvn clean test'
